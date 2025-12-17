@@ -23,3 +23,34 @@ body {
   background-color: rgba(34, 211, 238, 0.3);
   color: #fff;
 }
+
+@keyframes floatSlow {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(10px, -20px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes floatMedium {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-15px, -30px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes floatFast {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -40px); }
+  100% { transform: translate(0, 0); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 10s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: floatMedium 8s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: floatFast 6s ease-in-out infinite;
+}
+

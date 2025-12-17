@@ -1,6 +1,8 @@
 import Hero from "./sections/Hero";
 import Education from "./sections/Educations";
 import Experience from "./sections/Experience";
+import Projects from "./sections/Projects";
+import Skills from "./sections/Skills";
 import ParticlesBackground from "./ParticlesBackground";
 
 export default function App() {
@@ -12,6 +14,8 @@ export default function App() {
         <Hero />
         <Education />
         <Experience />
+        <Projects />
+        <Skills />
         {/* more sections */}
       </div>
     </div>
