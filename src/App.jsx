@@ -3,6 +3,9 @@ import Education from "./sections/Educations";
 import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
+import GraphicDesign from "./sections/GraphicDesign";
+import CreativeDivider from "./sections/CreativeDivider";
+import Photography from "./sections/Photography";
 import ParticlesBackground from "./ParticlesBackground";
 
 export default function App() {
@@ -16,6 +19,10 @@ export default function App() {
         <Experience />
         <Projects />
         <Skills />
+        <CreativeDivider />
+        <GraphicDesign />
+        <Photography />
+        
         {/* more sections */}
       </div>
     </div>

@@ -1,0 +1,95 @@
+import { motion } from "framer-motion";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+
+import PhotographyMockup from "../assets/social.png";
+import PhotographyLogo from "../assets/vj bold white.png";
+
+export default function Photography() {
+  return (
+    <section className="relative py-32 bg-gray-950/60 text-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+
+        {/* LEFT – MOCKUP + LOGO BADGE */}
+        <motion.div
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          className="relative flex justify-center"
+        >
+          {/* Glow */}
+          <div className="absolute -inset-10 bg-cyan-500/10 blur-3xl rounded-full" />
+
+          {/* Mockup */}
+          <motion.img
+            src={PhotographyMockup}
+            alt="Photography Social Preview"
+            whileHover={{ scale: 1.04 }}
+            transition={{ duration: 0.4 }}
+            className="relative w-full max-w-xl drop-shadow-[0_40px_120px_rgba(0,0,0,0.8)]"
+          />
+
+          
+        </motion.div>
+
+        {/* RIGHT – CONTENT */}
+        <motion.div
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+        >
+          
+
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="text-cyan-400">Photography</span>
+          </h2>
+
+          <h3 className="text-lg text-gray-400 mb-6">
+            Vibath Jayasundara Photography
+          </h3>
+
+          <p className="text-gray-400 leading-relaxed mb-5">
+            I capture moments that tell a story — focusing on emotion,
+            atmosphere, and authentic expressions. My photography blends
+            creative composition with natural lighting to produce timeless
+            visuals.
+          </p>
+
+          <p className="text-gray-400 leading-relaxed mb-8">
+            I specialize in{" "}
+            <span className="text-white">weddings</span>,{" "}
+            <span className="text-white">concerts</span>,{" "}
+            <span className="text-white">events</span>, and{" "}
+            <span className="text-white">portrait sessions</span>, delivering
+            images that feel cinematic, vibrant, and meaningful.
+          </p>
+
+          {/* CTA BUTTONS */}
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="https://web.facebook.com/profile.php?id=100070740467470"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 transition font-medium"
+            >
+              <FaFacebookF />
+              Facebook
+            </a>
+
+            <a
+              href="https://www.instagram.com/vibath.jayasundara.photography?igsh=MXJubzR1enYzcGtzaQ=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 transition font-medium"
+            >
+              <FaInstagram />
+              Instagram
+            </a>
+          </div>
+        </motion.div>
+
+      </div>
+    </section>
+  );
+}
