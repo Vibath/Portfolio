@@ -6,6 +6,8 @@ import Skills from "./sections/Skills";
 import GraphicDesign from "./sections/GraphicDesign";
 import CreativeDivider from "./sections/CreativeDivider";
 import Photography from "./sections/Photography";
+import Clients from "./sections/Clients";
+import ContactMe from "./sections/ContactMe";
 import ParticlesBackground from "./ParticlesBackground";
 
 export default function App() {
@@ -22,6 +24,8 @@ export default function App() {
         <CreativeDivider />
         <GraphicDesign />
         <Photography />
+        <Clients />
+        <ContactMe />
         
         {/* more sections */}
       </div>
