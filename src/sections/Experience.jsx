@@ -79,7 +79,7 @@ export default function Experience() {
                       block sm:absolute sm:-left-2 sm:-top-6
                       mt-2 sm:mt-0
                       text-xs sm:text-sm text-cyan-300 opacity-60
-                      transition-transform duration-300 group-hover:scale-110
+                      transition-transform duration-300 sm:group-hover:scale-110
                     "
                   >
                     {exp.period}

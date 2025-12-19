@@ -81,13 +81,15 @@ export default function Education() {
                   <span
                     className="
                       block sm:absolute sm:-right-2 sm:-top-6
-                      mt-2 sm:mt-0
+                      mt-4 sm:mt-0              /* increase margin-top on mobile */
                       text-xs sm:text-sm text-cyan-300 opacity-60
-                      transition-transform duration-300 group-hover:scale-110
+                      transition-transform duration-300
+                      sm:group-hover:scale-110   /* apply hover scale only on sm+ */
                     "
                   >
                     {edu.period}
                   </span>
+
 
 
                   <h3 className="text-xl md:text-2xl font-semibold text-white leading-snug mt-2 sm:mt-0">

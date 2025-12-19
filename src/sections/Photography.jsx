@@ -67,7 +67,8 @@ export default function Photography() {
               href="https://web.facebook.com/profile.php?id=100070740467470"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 sm:px- sm:py-3 rounded-full bg-blue-600 hover:bg-blue-700 transition text-sm sm:text-base font-medium max-w-[200px]"
+              className="flex items-center gap-2 px-4 py-2 sm:px- sm:py-3 rounded-full bg-blue-600 hover:bg-blue-700 transition text-sm sm:text-base font-medium max-w-[200px] hover:scale-105 hover:shadow-xl
+                  transition-all duration-300"
             >
               <FaFacebookF />
               Facebook
@@ -77,7 +78,8 @@ export default function Photography() {
               href="https://www.instagram.com/vibath.jayasundara.photography?igsh=MXJubzR1enYzcGtzaQ=="
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 transition text-sm sm:text-base font-medium max-w-[200px]"
+              className="flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 transition text-sm sm:text-base font-medium max-w-[200px] hover:scale-105 hover:shadow-xl
+                  transition-all duration-300"
             >
               <FaInstagram />
               Instagram

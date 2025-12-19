@@ -52,7 +52,7 @@ export default function Hero() {
               <div className="group relative inline-block">
                 <span
                   className="
-                    block mt-6 sm:mt-4 text-6xl sm:text-7xl md:text-9xl text-white
+                    block mt-2 sm:mt-1 text-6xl sm:text-7xl md:text-9xl text-white
                     bg-gradient-to-r from-cyan-400 via-pink-500 to-purple-500
                     bg-clip-text text-transparent
                     transition-all duration-700
@@ -130,7 +130,7 @@ export default function Hero() {
             </h2>
 
             <p className="text-gray-300 leading-relaxed
-              hover:text-cyan-400 transition-colors duration-500 text-sm sm:text-base md:text-lg">
+              sm:hover:text-cyan-400 transition-colors duration-500 text-sm sm:text-base md:text-lg">
               I’m Vibath, an undergraduate student passionate about Full Stack Development, building robust and scalable web applications with modern technologies. I also specialize in Data Science, analyzing data to uncover insights and drive intelligent solutions. Beyond technology, I’m a visual storyteller — capturing moments through photography and crafting compelling visuals. I enjoy designing intuitive interfaces and graphics, combining creativity with functionality to create engaging and impactful experiences.
             </p>
           </div>
