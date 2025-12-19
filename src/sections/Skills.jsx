@@ -38,7 +38,7 @@ export default function Skills() {
   const renderSkillRow = (skills) => (
     <div className="w-full overflow-hidden mb-12">
       <div className="flex gap-10 animate-scroll">
-        {[...skills, ...skills, ...skills].map((skill, idx) => {
+        {[...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills].map((skill, idx) => {
           const Icon = skill.icon;
           return (
             <div
@@ -85,7 +85,7 @@ export default function Skills() {
           .animate-scroll {
             display: flex;
             width: max-content;
-            animation: scroll 40s linear infinite;
+            animation: scroll 140s linear infinite;
           }
         `}
       </style>
