@@ -6,7 +6,8 @@ export default function Hero() {
 
       {/* FLOATING ROLES */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-12 left-4 animate-float-slow md:top-20 md:left-10">
+        {/* Full Stack Developer */}
+        <div className="absolute top-28 left-4 sm:top-12 sm:left-4 md:top-20 md:left-10 animate-float-slow">
           <span className="px-4 py-2 rounded-full text-xs md:text-sm font-medium
             text-cyan-300 border border-cyan-400/30
             bg-cyan-400/10 backdrop-blur-md
@@ -15,7 +16,8 @@ export default function Hero() {
           </span>
         </div>
 
-        <div className="absolute top-1/4 right-4 animate-float-medium md:top-1/3 md:right-16">
+        {/* Digital Creator */}
+        <div className="absolute top-44 right-4 sm:top-1/4 sm:right-4 md:top-1/3 md:right-16 animate-float-medium">
           <span className="px-4 py-2 rounded-full text-xs md:text-sm font-medium
             text-pink-300 border border-pink-400/30
             bg-pink-400/10 backdrop-blur-md
@@ -24,7 +26,8 @@ export default function Hero() {
           </span>
         </div>
 
-        <div className="absolute bottom-28 left-1/4 animate-float-fast md:bottom-32 md:left-1/3">
+        {/* Visual Storyteller */}
+        <div className="absolute bottom-60 left-1/6 sm:bottom-28 sm:left-1/4 md:bottom-32 md:left-1/3 animate-float-fast">
           <span className="px-4 py-2 rounded-full text-xs md:text-sm font-medium
             text-purple-300 border border-purple-400/30
             bg-purple-400/10 backdrop-blur-md
@@ -39,7 +42,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           {/* LEFT */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left mt-40 sm:mt-5"> {/* Adjust mt-32 for mobile first impression */}
             <h1 className="font-extrabold leading-tight">
               <span className="block text-lg md:text-xl tracking-widest text-cyan-400 uppercase animate-pulse">
                 Hello, I’m
@@ -49,7 +52,7 @@ export default function Hero() {
               <div className="group relative inline-block">
                 <span
                   className="
-                    block mt-2 text-5xl sm:text-6xl md:text-9xl text-white
+                    block mt-6 sm:mt-4 text-6xl sm:text-7xl md:text-9xl text-white
                     bg-gradient-to-r from-cyan-400 via-pink-500 to-purple-500
                     bg-clip-text text-transparent
                     transition-all duration-700
@@ -58,7 +61,6 @@ export default function Hero() {
                 >
                   Vibath
                 </span>
-                {/* Magic hover gradient animation */}
                 <style>{`
                   @keyframes gradient-hover {
                     0% { background-position: 0% 50%; }
@@ -72,19 +74,20 @@ export default function Hero() {
                 `}</style>
               </div>
 
-              <span className="block text-2xl sm:text-3xl md:text-5xl text-gray-400 font-medium">
+              <span className="block text-3xl sm:text-4xl md:text-5xl text-gray-400 font-medium mt-2">
                 Jayasundara
               </span>
             </h1>
 
-            <p className="mt-6 max-w-md mx-auto md:mx-0 text-gray-300 leading-relaxed
-              hover:text-cyan-400 transition-colors duration-500">
+            {/* Subtitle */}
+            <p className="mt-4 sm:mt-6 max-w-md mx-auto md:mx-0 text-gray-300 leading-relaxed
+              hover:text-cyan-400 transition-colors duration-500 text-sm sm:text-base md:text-lg">
               Undergraduate BSc(Hons) in Information Technology | Specializing in{" "}
               <span className="text-cyan-400 font-medium">Data Science</span> • Visual Storyteller
             </p>
 
             {/* BUTTONS */}
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
                 href="/Vibath Jayasundara CV.pdf"
                 download
@@ -117,7 +120,7 @@ export default function Hero() {
           </div>
 
           {/* RIGHT */}
-          <div className="md:pl-10 mt-10 md:mt-0 text-center md:text-left">
+          <div className="md:pl-10 mt-50 md:mt-0 text-center md:text-left">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-4 relative">
               About Me
               <span className="absolute -bottom-2 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 w-24 h-1
@@ -129,7 +132,6 @@ export default function Hero() {
             <p className="text-gray-300 leading-relaxed
               hover:text-cyan-400 transition-colors duration-500 text-sm sm:text-base md:text-lg">
               I’m Vibath, an undergraduate student passionate about Full Stack Development, building robust and scalable web applications with modern technologies. I also specialize in Data Science, analyzing data to uncover insights and drive intelligent solutions. Beyond technology, I’m a visual storyteller — capturing moments through photography and crafting compelling visuals. I enjoy designing intuitive interfaces and graphics, combining creativity with functionality to create engaging and impactful experiences.
-
             </p>
           </div>
 

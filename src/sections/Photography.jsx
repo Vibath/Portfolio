@@ -67,7 +67,7 @@ export default function Photography() {
               href="https://web.facebook.com/profile.php?id=100070740467470"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-blue-600 hover:bg-blue-700 transition text-sm sm:text-base font-medium max-w-[200px]"
+              className="flex items-center gap-2 px-4 py-2 sm:px- sm:py-3 rounded-full bg-blue-600 hover:bg-blue-700 transition text-sm sm:text-base font-medium max-w-[200px]"
             >
               <FaFacebookF />
               Facebook

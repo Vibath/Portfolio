@@ -23,7 +23,7 @@ export default function Education() {
   ];
 
   return (
-    <section className="relative py-16 px-4 sm:px-6 md:px-20">
+    <section className="relative py-12 px-4 sm:px-6 md:px-20">
       <div className="max-w-5xl mx-auto">
 
         {/* SECTION TITLE */}
@@ -32,7 +32,7 @@ export default function Education() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 sm:mb-16 text-white"
+          className="text-3xl md:text-5xl font-bold mb-12 text-white"
         >
           <span className="text-cyan-400">Education</span>
         </motion.h2>
@@ -40,69 +40,72 @@ export default function Education() {
         {/* TIMELINE */}
         <div className="relative">
 
-          {/* Vertical line (hidden on very small screens) */}
+          {/* Animated vertical line (only for desktop) */}
           <motion.div
             initial={{ height: 0 }}
             whileInView={{ height: "100%" }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="absolute left-4 top-0 w-px
-              bg-gradient-to-b from-cyan-400/70 via-cyan-400/30 to-transparent
-              hidden sm:block"
+            className="hidden sm:block absolute left-4 top-0 w-px bg-gradient-to-b from-cyan-400/80 via-cyan-400/40 to-transparent"
           />
 
-          <div className="space-y-12 sm:space-y-20">
+          <div className="space-y-10 sm:space-y-20"> {/* smaller gap on mobile */}
+
             {educations.map((edu, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.15 }}
-                className="grid grid-cols-1 sm:grid-cols-[40px_1fr] gap-6"
+                className="grid grid-cols-1 sm:grid-cols-[40px_1fr] gap-4 sm:gap-6 group"
               >
 
-                {/* DOT */}
-                <div className="relative hidden sm:flex justify-center">
+                {/* DOT COLUMN (desktop only) */}
+                <div className="hidden sm:flex relative justify-center mb-0 sm:mb-0">
                   <span
                     className="
-                      w-3.5 h-3.5 rounded-full
+                      w-4 h-4 rounded-full
                       bg-cyan-400
-                      shadow-[0_0_16px_rgba(34,211,238,0.8)]
+                      shadow-[0_0_20px_rgba(34,211,238,0.9)]
+                      transition-transform duration-300
+                      group-hover:scale-125
                     "
                   />
                 </div>
 
-                {/* CONTENT */}
+                {/* CONTENT COLUMN */}
                 <div className="relative">
 
-                  {/* PERIOD (inline on mobile, floating on desktop) */}
-                  <div className="mb-2 sm:mb-0 sm:absolute sm:-right-2 sm:-top-6">
-                    <span className="
-                      text-xs sm:text-sm
-                      text-cyan-300/70
-                    ">
-                      {edu.period}
-                    </span>
-                  </div>
+                  {/* YEAR BADGE */}
+                  <span
+                    className="
+                      block sm:absolute sm:-right-2 sm:-top-6
+                      mt-2 sm:mt-0
+                      text-xs sm:text-sm text-cyan-300 opacity-60
+                      transition-transform duration-300 group-hover:scale-110
+                    "
+                  >
+                    {edu.period}
+                  </span>
 
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white leading-snug">
+
+                  <h3 className="text-xl md:text-2xl font-semibold text-white leading-snug mt-2 sm:mt-0">
                     {edu.title}
                   </h3>
 
-                  <p className="text-gray-400 mt-2 text-sm sm:text-base">
+                  <p className="text-gray-400 mt-1">
                     {edu.school}
                   </p>
 
-                  <p className="text-gray-300 mt-4 max-w-2xl leading-relaxed text-sm sm:text-base">
+                  <p className="text-gray-300 mt-2 sm:mt-4 max-w-full sm:max-w-2xl leading-relaxed text-sm sm:text-base">
                     {edu.desc}
                   </p>
-
                 </div>
               </motion.div>
             ))}
-          </div>
 
+          </div>
         </div>
       </div>
     </section>
