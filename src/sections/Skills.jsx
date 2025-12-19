@@ -37,24 +37,24 @@ export default function Skills() {
 
   const renderSkillRow = (skills) => (
     <div className="w-full overflow-hidden mb-12">
-      <div className="flex gap-16 animate-scroll">
+      <div className="flex gap-10 animate-scroll">
         {[...skills, ...skills, ...skills].map((skill, idx) => {
           const Icon = skill.icon;
           return (
             <div
               key={idx}
-              className="skill-item flex-none flex flex-col items-center gap-2 transition-all duration-300 transform hover:scale-110 hover:shadow-[0_0_40px_rgba(34,211,238,0.3)]"
+              className="skill-item flex-none flex flex-col items-center gap-2 transition-all duration-300 transform hover:scale-110 hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]"
             >
               {skill.isSvg ? (
                 <img
                   src={Icon}
                   alt={skill.name}
-                  className="w-12 h-12 md:w-16 md:h-16"
+                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16"
                 />
               ) : (
-                <Icon className="text-5xl md:text-6xl" />
+                <Icon className="text-3xl sm:text-4xl md:text-6xl" />
               )}
-              <span className="text-sm md:text-base">{skill.name}</span>
+              <span className="text-xs sm:text-sm md:text-base text-white">{skill.name}</span>
             </div>
           );
         })}
@@ -64,12 +64,14 @@ export default function Skills() {
 
   return (
     <section className="relative py-16 bg-gray-950">
-      <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center text-white">
+      {/* Development Skills */}
+      <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8 text-center text-white">
         <span className="text-cyan-400">Development Skills</span>
       </h2>
       {renderSkillRow(devSkills)}
 
-      <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center text-white">
+      {/* Creative Skills */}
+      <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8 text-center text-white">
         <span className="text-pink-400">Creative Skills</span>
       </h2>
       {renderSkillRow(creativeSkills)}

@@ -54,7 +54,7 @@ export default function Projects() {
         </motion.h2>
 
         {/* PROJECT GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
           {projects.map((project, i) => (
             <motion.div
               key={i}
@@ -63,60 +63,34 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
               className="
-                relative group rounded-2xl p-8
-                bg-white/5 backdrop-blur-md
-                border border-white/10
-                hover:border-cyan-400/40
-                transition-all duration-500
-                hover:shadow-[0_0_60px_rgba(34,211,238,0.15)]
-              "
+        relative group rounded-2xl p-6 sm:p-8
+        bg-white/5 backdrop-blur-md
+        border border-white/10
+        hover:border-cyan-400/40
+        transition-all duration-500
+        hover:shadow-[0_0_60px_rgba(34,211,238,0.15)]
+      "
             >
-              {/* GLOW */}
               <div
                 className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-30
-                  bg-gradient-to-br ${project.gradient}
-                  blur-2xl transition-opacity duration-500`}
+          bg-gradient-to-br ${project.gradient}
+          blur-2xl transition-opacity duration-500`}
               />
-
-              {/* CONTENT */}
               <div className="relative z-10">
-                <h3 className="text-2xl font-semibold text-white">
-                  {project.title}
-                </h3>
-
-                <p className="text-sm text-cyan-300 mt-1">
-                  {project.subtitle}
-                </p>
-
-                <p className="text-gray-300 mt-4 leading-relaxed">
-                  {project.desc}
-                </p>
-
-                {/* TECH + ACTIONS */}
-                <div className="mt-6 flex items-center justify-between flex-wrap gap-4">
-
-                  {/* TECH STACK */}
-                  <div className="flex items-center gap-4 text-xl text-gray-300">
+                <h3 className="text-xl sm:text-2xl font-semibold text-white">{project.title}</h3>
+                <p className="text-xs sm:text-sm text-cyan-300 mt-1">{project.subtitle}</p>
+                <p className="text-gray-300 mt-4 leading-relaxed text-sm sm:text-base">{project.desc}</p>
+                <div className="mt-6 flex items-center justify-between flex-wrap gap-3">
+                  <div className="flex items-center gap-3 text-lg sm:text-xl text-gray-300">
                     {project.tech.map((Icon, idx) => (
-                      <Icon
-                        key={idx}
-                        className="hover:text-cyan-400 transition-colors duration-300"
-                      />
+                      <Icon key={idx} className="hover:text-cyan-400 transition-colors duration-300" />
                     ))}
                   </div>
-
-                  {/* GITHUB BUTTON */}
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="
-                      flex items-center gap-2 px-4 py-2 rounded-full
-                      text-sm font-medium
-                      border border-gray-500 text-gray-300
-                      hover:bg-white hover:text-black
-                      transition-all duration-300
-                    "
+                    className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium border border-gray-500 text-gray-300 hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto justify-center"
                   >
                     <FaGithub /> GitHub
                   </a>
@@ -125,6 +99,7 @@ export default function Projects() {
             </motion.div>
           ))}
         </div>
+
 
       </div>
     </section>

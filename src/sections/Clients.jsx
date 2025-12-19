@@ -40,30 +40,31 @@ export default function Clients() {
         </motion.h3>
 
         {/* Clients */}
-        <div className="flex flex-wrap justify-center gap-x-20 gap-y-14">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-8 justify-items-center">
           {clients.map((client, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.08 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="group flex items-center gap-4 cursor-default"
+              className="group flex flex-col items-center gap-2 cursor-default"
             >
               <img
                 src={client.logo}
                 alt={client.name}
                 className="h-14 md:h-16 w-auto object-contain transition-all duration-300
-                           group-hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.25)]"
+                   group-hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.25)]"
               />
-
               <span
-                className="text-base md:text-lg text-gray-400 transition-colors duration-300
-                           group-hover:text-white whitespace-nowrap"
+                className="text-sm md:text-base text-gray-400 transition-colors duration-300
+                   group-hover:text-white text-center"
               >
                 {client.name}
               </span>
             </motion.div>
           ))}
         </div>
+
+
 
       </div>
     </section>

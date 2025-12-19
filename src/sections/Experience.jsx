@@ -45,18 +45,20 @@ export default function Experience() {
           <span className="text-cyan-400">Experience</span>
         </motion.h2>
 
-        {/* TIMELINE */}
+        {/* EXPERIENCES */}
         <div className="relative">
-          {/* Animated vertical line */}
-          <motion.div
-            initial={{ height: 0 }}
-            whileInView={{ height: "100%" }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="absolute right-4 top-0 w-px bg-gradient-to-b from-cyan-400/80 via-cyan-400/40 to-transparent"
-          />
+          {/* Vertical timeline only for md+ */}
+          <div className="hidden md:block">
+            <motion.div
+              initial={{ height: 0 }}
+              whileInView={{ height: "100%" }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="absolute right-4 top-0 w-px bg-gradient-to-b from-cyan-400/80 via-cyan-400/40 to-transparent"
+            />
+          </div>
 
-          <div className="space-y-20">
+          <div className="space-y-12 md:space-y-20">
             {experiences.map((exp, i) => (
               <motion.div
                 key={i}
@@ -64,12 +66,12 @@ export default function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.15 }}
-                className="grid grid-cols-[1fr_40px] gap-6 group"
+                className="grid md:grid-cols-[1fr_40px] gap-6 group"
               >
                 {/* CONTENT COLUMN */}
-                <div className="relative text-right">
-                  {/* YEAR BADGE */}
-                  <span className="absolute -left-2 -top-6 text-s text-cyan-300 opacity-60 transition-transform duration-300 group-hover:scale-110">
+                <div className="relative text-right md:text-right">
+                  {/* Period badge only for md+ */}
+                  <span className="hidden md:absolute -left-2 -top-6 text-s text-cyan-300 opacity-60 transition-transform duration-300 group-hover:scale-110">
                     {exp.period}
                   </span>
 
@@ -77,33 +79,25 @@ export default function Experience() {
                     {exp.title}
                   </h3>
 
-                  <p className="text-gray-400 mt-2">
-                    {exp.company}
-                  </p>
+                  <p className="text-gray-400 mt-2">{exp.company}</p>
 
                   <div className="mt-4 space-y-2 max-w-2xl ml-auto">
                     {exp.desc.map((line, idx) => (
-                      <p
-                        key={idx}
-                        className="text-gray-300 leading-relaxed"
-                      >
+                      <p key={idx} className="text-gray-300 leading-relaxed">
                         {line}
                       </p>
                     ))}
                   </div>
+
+                  {/* Period for mobile below card */}
+                  <span className="md:hidden mt-2 block text-gray-400 text-sm">
+                    {exp.period}
+                  </span>
                 </div>
 
-                {/* DOT COLUMN */}
-                <div className="relative flex justify-center">
-                  <span
-                    className="
-                      w-4 h-4 rounded-full
-                      bg-cyan-400
-                      shadow-[0_0_20px_rgba(34,211,238,0.9)]
-                      transition-transform duration-300
-                      group-hover:scale-125
-                    "
-                  />
+                {/* DOT COLUMN only for md+ */}
+                <div className="hidden md:flex relative justify-center">
+                  <span className="w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.9)] transition-transform duration-300 group-hover:scale-125" />
                 </div>
               </motion.div>
             ))}

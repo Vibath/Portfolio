@@ -93,38 +93,40 @@ export default function ContactMe() {
         </AnimatePresence>
 
         {/* Social Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mt-12">
+        {/* Social Buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mt-12 max-w-md mx-auto">
           <motion.a href="https://wa.me/+94768811309" target="_blank" rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-3 px-5 py-3 bg-green-500 hover:bg-green-600 rounded-xl transition font-medium shadow-md"
+            className="flex items-center gap-3 px-4 py-2 bg-green-500 hover:bg-green-600 rounded-xl transition font-medium shadow-md text-sm"
           >
             <FaWhatsapp /> WhatsApp
           </motion.a>
           <motion.a href="https://www.facebook.com/share/1CC63daQrx/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-3 px-5 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl transition font-medium shadow-md"
+            className="flex items-center gap-3 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-xl transition font-medium shadow-md text-sm"
           >
             <FaFacebookF /> Facebook
           </motion.a>
           <motion.a href="https://www.instagram.com/_vibath.mkj_?igsh=MXI4c29kcHNiYmxwMw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-3 px-5 py-3 bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 rounded-xl transition font-medium shadow-md"
+            className="flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 rounded-xl transition font-medium shadow-md text-sm"
           >
             <FaInstagram /> Instagram
           </motion.a>
           <motion.a href="https://linkedin.com/in/vibath-jayasundara-aa0806350" target="_blank" rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-3 px-5 py-3 bg-blue-500 hover:bg-blue-600 rounded-xl transition font-medium shadow-md"
+            className="flex items-center gap-3 px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-xl transition font-medium shadow-md text-sm"
           >
             <FaLinkedin /> LinkedIn
           </motion.a>
           <motion.a href="https://github.com/Vibath" target="_blank" rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-3 px-5 py-3 bg-gray-700 hover:bg-gray-800 rounded-xl transition font-medium shadow-md"
+            className="flex items-center gap-3 px-4 py-2 bg-gray-700 hover:bg-gray-800 rounded-xl transition font-medium shadow-md text-sm"
           >
             <FaGithub /> GitHub
           </motion.a>
         </div>
+
 
       </div>
 
