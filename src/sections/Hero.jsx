@@ -1,6 +1,20 @@
 import { FaDownload, FaGithub } from "react-icons/fa";
 
 export default function Hero() {
+  const downloadCV = () => {
+    fetch("/Vibath Jayasundara CV.pdf")
+      .then(response => response.blob())
+      .then(blob => {
+        const url = window.URL.createObjectURL(new Blob([blob]));
+        const link = document.createElement("a");
+        link.href = url;
+        link.setAttribute("download", "Vibath Jayasundara CV.pdf");
+        document.body.appendChild(link);
+        link.click();
+        link.parentNode.removeChild(link);
+      })
+      .catch(err => console.error("CV download error:", err));
+  };
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
 
@@ -88,19 +102,18 @@ export default function Hero() {
 
             {/* BUTTONS */}
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <a
-                href="/Vibath Jayasundara CV.pdf"
-                download
-                className="
-                  flex justify-center items-center gap-2 px-6 py-3 rounded-full text-sm font-medium
-                  bg-gradient-to-r from-cyan-500 to-pink-500 text-black
-                  hover:from-pink-500 hover:to-purple-500
-                  hover:scale-105 hover:shadow-xl
-                  transition-all duration-300
-                "
-              >
-                <FaDownload /> Download CV
-              </a>
+            <button
+          onClick={downloadCV}
+          className="
+            flex justify-center items-center gap-2 px-6 py-3 rounded-full text-sm font-medium
+            bg-gradient-to-r from-cyan-500 to-pink-500 text-black
+            hover:from-pink-500 hover:to-purple-500
+            hover:scale-105 hover:shadow-xl
+            transition-all duration-300
+          "
+        >
+          <FaDownload /> Download CV
+        </button>
 
               <a
                 href="https://github.com/Vibath"
